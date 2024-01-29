@@ -1,2 +1,2 @@
 # Spotify_clone
-This is a clone of Spotify website.
+This is a responsive Spotify clone build using Html,Css and Bootstarp.
