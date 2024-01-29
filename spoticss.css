@@ -1,0 +1,461 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.main {
+  height: 100vh;
+  width: 100vw;
+  padding: 0.5rem;
+  display: flex;
+  overflow: hidden;
+  background-color: black;
+}
+
+.sidebar {
+  height: 100vh;
+  width: 21.6rem;
+  /* border: 2px solid red; */
+  border-radius: 0.5rem;
+}
+
+.section {
+  /* flex:1; */
+  width: calc(100% - 21.6rem);
+  margin-left: 0.75rem;
+  overflow: scroll;
+}
+
+.player {
+  background-color: black;
+  position: fixed;
+  bottom: 0;
+  padding: 0.75rem;
+  width: 100%;
+  height: 5rem;
+}
+
+.items {
+  padding: 0.5rem 0.75rem;
+  background-color: #121212;
+  height: 7rem;
+  line-height: 2.5rem;
+  border-radius: 0.5rem;
+  color: white;
+}
+
+.items i,
+.lib i {
+  font-size: 1.25rem;
+  padding: 0.25rem;
+}
+
+.items a {
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 0.5rem;
+  color: white;
+  opacity: 0.5;
+}
+
+.items a:hover {
+  opacity: 1;
+}
+
+.item {
+  padding: 0.25rem 0.75rem;
+}
+
+.library {
+  margin-top: 0.5rem;
+  background-color: #121212;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  height: calc(100% - 2.25rem);
+}
+
+.lib_title {
+  padding: 0.5rem 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+.lib {
+  opacity: 0.5;
+  font-size: 1rem;
+}
+
+.lib:hover {
+  opacity: 1;
+}
+
+.blackbtn {
+  height: 1.75rem;
+  width: 1.75rem;
+  text-align: start;
+  border: none;
+
+  background-color: black;
+  color: white;
+  border-radius: 1rem;
+  opacity: 0.5;
+  font-size: 1rem;
+}
+
+.blackbtn:hover {
+  opacity: 1;
+}
+
+.library .card {
+  margin: 1rem 0;
+  padding: 1rem 1.25rem;
+  background-color: #242424;
+  color: white;
+  border-radius: 1.25rem;
+}
+
+.title {
+  font-size: 16px;
+}
+
+.sub {
+  font-size: 13px;
+  margin-bottom: 1rem;
+}
+
+.white-btn {
+  width: fit-content;
+  height: fit-content;
+  color: black;
+  text-align: top;
+  font-weight: bolder;
+  border: none;
+  border-radius: 2px;
+  font-size: 0.81rem;
+  padding: 0.25rem 1rem;
+  border-radius: 15px;
+}
+
+.white-btn:hover {
+  transform: scale(1.05);
+}
+
+.head {
+  position: sticky;
+  top: 0;
+  background-color: #121212;
+  border-radius: 0.5rem;
+  height: 4rem;
+  padding: 1rem 1.25rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bell:hover {
+  opacity: 1;
+  transform: scale(1.05);
+  transition: all 0.5sec ease-out;
+}
+
+.profile {
+  opacity: 1;
+}
+
+.install {
+  background-color: black;
+  color: white;
+  border: 0;
+  padding: 0.25rem 1rem;
+  border-radius: 1rem;
+}
+
+.install:hover {
+  transform: scale(1.05);
+}
+
+.btns button,
+i {
+  margin-left: 0.5rem;
+}
+
+.albums {
+  padding: 1.5rem;
+  background-color: #121212;
+}
+
+.out {
+  display: flex;
+  justify-content: space-between;
+  text-align: base-line;
+}
+
+.album_head {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.album_head:hover {
+  text-decoration: underline;
+}
+
+.album_sub {
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #b3b3b3;
+}
+
+.album_sub:hover {
+  text-decoration: underline;
+}
+
+.album {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.box1 {
+  background-color: #24242479;
+  height: 15.5rem;
+  width: 11.5rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  color: white;
+  transition: all 0.15s ease-in-out;
+  /* border:2px solid aqua; */
+}
+
+.empty {
+  visibility: hidden;
+}
+
+.box1:hover {
+  background-color: #b3b3b331;
+
+  .play {
+    opacity: 1;
+  }
+}
+
+img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+h5 {
+  font-size: 1rem;
+  padding-top: 0.75rem;
+}
+
+p {
+  font-size: 0.8rem;
+  opacity: 0.5;
+}
+
+.play {
+  height: 2.25rem;
+  width: 2.25rem;
+  font-size: 1.25rem;
+  background-color: rgba(20, 235, 20, 0.642);
+  border-radius: 1.5rem;
+  padding: 0.5rem 0 0 0.2rem;
+
+  position: relative;
+  left: 6.56rem;
+  color: black;
+  bottom: 8.12rem;
+  opacity: 0;
+}
+
+/* .items span{
+    text-align: end;
+} */
+
+#line {
+  font-size: 1rem;
+  color: white;
+  opacity: 0.5;
+  padding-bottom: 0.5rem;
+}
+
+#line:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.social {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.social button {
+  height: 2.25rem;
+  width: 2.25rem;
+  font-size: 1rem;
+  background-color: #242424;
+  color: white;
+  margin-left: 0.5rem;
+  border: none;
+  text-align: start;
+  padding: 0.25rem;
+  border-radius: 50%;
+}
+
+.social button:hover {
+  background-color: #f4f3f369;
+}
+
+#link {
+  background-color: #121212;
+}
+
+#dark {
+  opacity: 1;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  padding-bottom: 0.25rem;
+}
+
+.items .copy {
+  display: inline;
+  position: relative;
+  left: 23rem;
+  opacity: 0.5;
+}
+
+.player {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box {
+  width: 33.33%;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+}
+
+.controlsbox .control {
+  color: #8d8d8d6a;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.dark {
+  color: #222222;
+}
+
+.control .fa-circle-pause {
+  font-size: 2rem;
+  margin: 0 0.5rem 0 1rem;
+}
+.control .fa-circle-pause:hover {
+  transform: scale(1.05);
+}
+
+.bar input {
+  width: 20rem;
+}
+
+.endbox {
+  font-size: 1rem;
+  text-align: start;
+  margin-left: 8.5rem;
+  align-self: center;
+}
+.endbox i {
+  color: white;
+  opacity: 0.6;
+}
+.endbox i:hover {
+  opacity: 1;
+}
+.mb {
+  margin-bottom: 5rem;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .none {
+    display: none;
+  }
+  .box {
+    display: inline;
+  }
+
+  .albums {
+    padding: 0.5rem;
+  }
+
+  .box1 {
+    width: 10rem;
+    height: 14rem;
+    margin-bottom: 1rem;
+  }
+  .box1 p {
+    margin-bottom: 0;
+  }
+
+  .commbox {
+    height: fit-content;
+    margin-bottom: 0.25rem;
+  }
+  .contact {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+
+  .social {
+    margin-top: 0;
+    width: 12rem;
+    height: 4rem;
+    text-align: start;
+    padding-left: 0.25rem;
+  }
+
+  .items .copy {
+    display: block;
+    left: 0.25rem;
+  }
+  .player {
+    padding: 0 0.5rem;
+  }
+  .endbox span input {
+    width: 3rem;
+  }
+  .player {
+    padding: 0.5rem;
+  }
+  .endbox {
+    margin-left: 0;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .album .empty {
+    display: none;
+  }
+  .items .copy {
+    display: block;
+    left: 0.25rem;
+  }
+  .album .social {
+    height: fit-content;
+  }
+
+  .endbox span input {
+    width: 5rem;
+  }
+
+  .album {
+    justify-content: space-between;
+  }
+}
